@@ -1,0 +1,82 @@
+<%- include('partials/header') -%>
+
+    <h1 class="forecast-heading">
+        Look ahead for 5 days... <br>
+        in <%= city %>
+    </h1>
+    <div class="weather-info">
+        <% for(var i=0;i < data.length;i+=8){ %>
+            <% var el=data.slice(i,i+8) %>
+                <div class="weather-row mt-4">
+                    <h2>
+                        <%= el[0].date %>
+                    </h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <% var url=`linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0,
+                                0.507)),url('/images/${el[2].main}.jpg');` %>
+                                <div class="weather-card" style="background:<%= url %>">
+                                    <span>Time: <%= el[2].time %></span><br><br>
+                                    <div class="text-center fs-1"><span id="temp">
+                                            <%= el[2].temp %>&#x2103;
+                                        </span></div>
+                                    <div class="text-center fs-1"><img
+                                            src="https://openweathermap.org/img/wn/<%= el[2].icon %>@2x.png"
+                                            alt=""><br><span>
+                                            <%= el[2].main %>
+                                        </span></div>
+                                    <br>
+                                    <span>Humidity: <%= el[2].humidity %>%</span>
+                                    <br>
+                                    <span>Wind Speed: <%= el[2].wind %>Kmph</span>
+                                    <br>
+                                    <span>Visibility: <%= el[2].visibility/100 %>%</span>
+                                </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <% var url=`linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0,
+                                0.507)),url('/images/${el[5].main}.jpg');` %>
+                                <div class="weather-card" style="background:<%= url %>">
+                                    <span>Time: <%= el[5].time %></span><br><br>
+                                    <div class="text-center fs-1"><span id="temp">
+                                            <%= el[5].temp %>&#x2103;
+                                        </span></div>
+                                    <div class="text-center fs-1"><img
+                                            src="https://openweathermap.org/img/wn/<%= el[5].icon %>@2x.png"
+                                            alt=""><br><span>
+                                            <%= el[5].main %>
+                                        </span></div>
+                                    <br>
+                                    <span>Humidity: <%= el[5].humidity %>%</span>
+                                    <br>
+                                    <span>Wind Speed: <%= el[5].wind %>Kmph</span>
+                                    <br>
+                                    <span>Visibility: <%= el[5].visibility/100 %>%</span>
+                                </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <% var url=`linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0,
+                                0.507)),url('/images/${el[7].main}.jpg');` %>
+                                <div class="weather-card" style="background:<%= url %>">
+                                    <span>Time: <%= el[7].time %></span><br><br>
+                                    <div class="text-center fs-1"><span id="temp">
+                                            <%= el[7].temp %>&#x2103;
+                                        </span></div>
+                                    <div class="text-center fs-1"><img
+                                            src="https://openweathermap.org/img/wn/<%= el[7].icon %>@2x.png"
+                                            alt=""><br><span>
+                                            <%= el[7].main %>
+                                        </span></div>
+                                    <br>
+                                    <span>Humidity: <%= el[7].humidity %>%</span>
+                                    <br>
+                                    <span>Wind Speed: <%= el[7].wind %>Kmph</span>
+                                    <br>
+                                    <span>Visibility: <%= el[7].visibility/100 %>%</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+    </div>
+    <%- include('partials/footer') -%>

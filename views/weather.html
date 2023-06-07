@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/04a46b921a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script defer src="script/index.js"></script>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+</head>
+
+<body>
+    <style>
+        .forecast-heading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            padding: 5%;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        .weather-info {
+            background-color: black;
+            margin-top: 15rem;
+        }
+
+        .weather-row {
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 25rem;
+            background: black;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .weather-row .row {
+            width: 100%;
+            height: 100%;
+        }
+
+        .weather-row .col-sm-4{
+            padding: 3px;
+        }
+
+        .weather-row h2 {
+            text-align: center;
+            color: white;
+            font-size: 40px;
+        }
+
+        .weather-card {
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.507)),url('/public/images/pexels-jimmy-chan-1117403.jpg');
+            color: white;
+            background-size: cover;
+        }
+
+        @media screen and (max-width:800px) {
+            
+        }
+    </style>
+    <h1 class="forecast-heading">
+        Look ahead for 5 days..
+    </h1>
+    <div class="weather-info">
+        <div class="weather-row">
+            <h2>Today</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="weather-card">
+                        <span>Time: 10:30</span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="weather-card">
+                        <span>Time: 10:30</span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="weather-card">
+                        <span>Time: 10:30</span><br><br><br>
+                        <div class="text-center fs-1"><span id="temp">24&#x2103;</span></div>
+                        <div class="text-center fs-1"><span id="weather-icon"></span></div>
+                        <br><br><br>
+                        <span>Humidity: 65%</span>
+                        <br>
+                        <span>Precipitation: 10%</span>
+                        <br>
+                        <span>Visibility: 8km</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

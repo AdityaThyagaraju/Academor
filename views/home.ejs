@@ -1,0 +1,28 @@
+<%- include('partials/header') -%>
+
+    <body>
+
+        <div class="hero">
+            <div class="backdrop"></div>
+            <div class="hero-content">
+                <h1>Weather forecast</h1>
+                <p>Checkout what's the weather in your location...</p>
+            </div>
+        </div>
+        <div class="location-inp mx-auto bg-light rounded-3 border border-light-subtle m-5">
+            <h2>Enter location</h2>
+            <div class="input-field shadow-sm border border-light-subtle bg-dark text-white rounded-2 m-3"> <input
+                    id="city-inp" type="text" name="city" class="text-center" placeholder="city name" />
+                    <i id="city-sub" class="d-inline-block p-2 fa-sharp fa-solid fa-arrow-right fs-5"></i></div>
+            <span class="text-sm mb-3">OR</span>
+            <div class="mb-3 input-field shadow-sm border border-light-subtle bg-dark text-white rounded-2 ">
+                <input id="lat-inp" type="text" name="city" class="text-center" placeholder="lattitude" />
+                <input id="long-inp" type="text" name="city" class="text-center" placeholder="longitude" />
+                <i id="lat-long-sub" class="d-inline-block p-2 fa-sharp fa-solid fa-arrow-right fs-5"></i>
+            </div>
+            <span class="mb-3 text-sm">OR</span>
+            <span id="cur-loc" class="w-100 text-center">
+                use current location <i class="fa-solid fa-location-dot"></i>
+            </span>
+        </div>
+        <%- include('partials/footer') -%>
